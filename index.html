@@ -1,34 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panaderia horno dorado</title>
-    <link rel="stylesheet" href="./estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title>Panadería El Horno Dorado</title>
 
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,700,1,200&icon_names=store,favorite,shopping_bag,star,schedule" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos.css" />
+    
 </head>
 <body>
- <h1> Alejandro Moraga Garcia </h1>
 
     <header>
         <h1 class="titulo-principal">El Horno Dorado</h1>
-        <p class="subtitulo">Panadería &amp; Pastelería Artesanal</p>
+        <p class="subtitulo">Panadería & Pastelería Artesanal</p>
+        <br>
+        <button class="boton-tema" id="botonTema">🌙 Modo oscuro</button>
     </header>
 
-  
+    <nav>
+        <a href="#"><span class="material-symbols-outlined">store</span> Inicio</a>
+        <a href="#"><span class="material-symbols-outlined">shopping_bag</span> Productos</a>
+        <a href="#"><span class="material-symbols-outlined">favorite</span> Especialidades</a>
+        <a href="#"><span class="material-symbols-outlined">schedule</span> Horarios</a>
+    </nav>
 
     <div class="contenedor">
 
         <section>
-            <h2><span class="material-symbols-outlined"></span> Nuestras Cualidades</h2>
+            <h2><span class="material-symbols-outlined">star</span> Nuestras Cualidades</h2>
             <p style="text-indent: 20px;">En El Horno Dorado mantenemos la tradición artesanal utilizando ingredientes 100% naturales.</p>
             <br>
-            <ul class="caracteristicas"> 
-                <li>Masa madre fermentada durante 24 horas.</li>
+            <ul class="caracteristicas">
+                <li>Masa madre echa durante 24 horas.</li>
                 <li>Harinas orgánicas de grano entero .</li>
                 <li>Horneado diario en horno de piedra tradicional.</li>
             </ul>
-        </section>   
+        </section>
+
+        <section>
+            <h2>Nuestros Productos Destacados</h2>
+            <p>Descubre nuestra variedad diaria preparada desde muy temprano:</p>
+            <br>
+            <div class="tarjeta-producto destacado">
+                <h3>Bomba de chocolate</h3>
+                <p>Cacao en polvo y chocolate para fundir .</p>
+                <strong>1.50 €</strong>
+            </div>
+
+            <div class="tarjeta-producto">
+                <h3>Croissant de chocolate</h3>
+                <p>Hojaldre artesanal elaborado diariamente.</p>
+                <strong>1.80 €</strong>
+            </div>
+
+            <div class="tarjeta-producto">
+                <h3>Palmera de Kinder</h3>
+                <p> una lámina de hojaldre, azúcar, chocolate con leche, crema de avellanas y barritas Kinder</p>
+                <strong>2.00 €</strong>
+            </div>
+        </section>
+
+        <section>
+            <h2>Lista de Precios y Horarios de Horneado</h2>
+            
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Tipo de Harina</th>
+                            <th>Hora de Salida</th>
+                            <th>Precio Unitario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Baguette Tradicional</td>
+                            <td>Harina Trigo y levadura seca </td>
+                            <td>07:00 AM</td>
+                            <td>1.20 €</td>
+                        </tr>
+                        <tr>
+                            <td>Pan de harina</td>
+                            <td>Harina de trigo y levadura fresca </td>
+                            <td>08:30 AM</td>
+                            <td>2.80 €</td>
+                        </tr>
+                        <tr>
+                            <td>Pan de  Piña</td>
+                            <td>Trigo y Huevos</td>
+                            <td>09:15 AM</td>
+                            <td>3.50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Pan de chapata</td>
+                            <td>Corteza crujiente y miga llena de agujeros</td>
+                            <td>10:00 AM</td>
+                            <td>3.20 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Notas de Producción</h2>
+            <div class="nota-margen-1">Nota 1: Pedidos especiales con 24h de antelación.</div>
+            <div class="nota-margen-2">Nota 2: Pregunta por nuestras opciones sin gluten.</div>
+
+            <p class="oferta-oculta">Esta oferta especial está oculta con display: none.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Panadería El Horno Dorado - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const boton = document.getElementById('botonTema');
+        const raiz = document.documentElement;
+
+        raiz.setAttribute('data-theme', 'light');
+
+        boton.addEventListener('click', function () {
+            if (raiz.getAttribute('data-theme') === 'dark') {
+                raiz.setAttribute('data-theme', 'light');
+                boton.textContent = '🌙 Modo oscuro';
+            } else {
+                raiz.setAttribute('data-theme', 'dark');
+                boton.textContent = '☀️ Modo claro';
+            }
+        });
+    </script>
+
 </body>
 </html>

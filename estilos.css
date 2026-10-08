@@ -1,23 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Poppins:wght@300;400;600&display=swap');
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+:root {
+    --color-fondo: hsl(35, 30%, 96%);
+    --color-texto: #3e2723;
+    --cabecera-inicio: #4a2c11;
+    --cabecera-fin: #2b1808;
+    --nav-fondo: #3e2723;
+    --seccion-fondo: #ffffff;
+    --tarjeta-fondo: hsla(35, 100%, 97%, 0.8);
+    --borde: #d7ccc8;
+    --tabla-cabecera: #5d4037;
+    --tabla-fila-par: #f5f5f5bb;
+}
+
+/* Tema oscuro activado manualmente con el botón */
+:root[data-theme="dark"] {
+    --color-fondo: hsl(25, 20%, 10%);
+    --color-texto: #f0e4d8;
+    --cabecera-inicio: #2b1808;
+    --cabecera-fin: #140b04;
+    --nav-fondo: #1e140f;
+    --seccion-fondo: #2a2019;
+    --tarjeta-fondo: hsla(25, 30%, 20%, 0.8);
+    --borde: #5d4a40;
+    --tabla-cabecera: #3e2e27;
+    --tabla-fila-par: rgba(255, 255, 255, 0.05);
+}
+
+/* Botón de cambio de tema */
+.boton-tema {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: var(--seccion-fondo);
+    color: var(--color-texto);
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.boton-tema:hover {
+    background-color: var(--tarjeta-fondo);
+}
 
 body {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem; 
-            line-height: 1.6;
-            word-spacing: 2px;
-            
-            background-color: hsl(35, 30%, 96%);
-           
-            color: #3e2723;
-        }        
-        .contenedor {
-            display: block;
-            width: 90%;
-            max-width: 1000px;
-            margin: 20px auto;
-        }
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    word-spacing: 2px;
 
+    background-color: var(--color-fondo);
 
-        
+    color: var(--color-texto);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cabecera-inicio), var(--cabecera-fin));
+    color: rgb(255, 248, 240);
+    text-align: center;
+    padding: 30px 15px;
+    border-bottom: 4px solid var(--borde);
+}
+
+.titulo-principal {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(0.25turn, #ffe0b2, #e8a87c, #ffe0b2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-weight: 300;
+    color: oklch(0.88 0.08 75);
+    letter-spacing: 1px;
+}
+
+nav {
+    background-color: var(--nav-fondo);
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: #fff8f0;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.contenedor {
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+section {
+    display: block;
+    background-color: var(--seccion-fondo);
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: oklch(0.42 0.12 45);
+    border-bottom: 2px solid oklch(0.85 0.08 75);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+ul.caracteristicas {
+    list-style-type: square;
+    padding-left: 25px;
+}
+
+ul.caracteristicas li {
+    margin-bottom: 8px;
+}
+
+.tarjeta-producto {
+    display: inline-block;
+    width: 30%;
+    min-width: 220px;
+    margin: 1%;
+    padding: 15px;
+    background-color: var(--tarjeta-fondo);
+    border: 1px solid var(--borde);
+    vertical-align: top;
+    text-align: center;
+}
+
+.tarjeta-producto h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: Brown;
+}
+
+.destacado {
+    background-image: radial-gradient(circle, #fff3e0, #ffe0b2);
+}
+
+.destacado p,
+.destacado strong {
+    color: #3e2723;
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #bcaaa4;
+}
+
+@media (max-width: 600px) {
+    table {
+        min-width: 550px;
+    }
+}
+
+th {
+    height: 50px;
+    background-color: var(--tabla-cabecera);
+    color: #ffffff;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--tabla-fila-par);
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    font-size: 20px;
+    color: #d84315;
+}
+
+.nota-margen-1 {
+    margin-bottom: 30px;
+    background-color: #fff8e1;
+    color: #3e2723;
+    padding: 10px;
+}
+.nota-margen-2 {
+    margin-top: 20px;
+    background-color: #ffecb3;
+    color: #3e2723;
+    padding: 10px;
+}
+
+.oferta-oculta {
+    display: none;
+}
+
+.oferta-invisible {
+    visibility: hidden;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cabecera-fin);
+    color: #d7ccc8;
+    font-size: 0.9rem;
+}
