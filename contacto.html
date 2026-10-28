@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Panadería El Horno Dorado</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header id="cabecera">
+        <h1 class="titulo-principal">El Horno Dorado</h1>
+        <p class="subtitulo">Panadería &amp; Pastelería Artesanal</p>
+        <nav class="menu">
+            <a class="enlace-menu" href="index.html"><span class="material-symbols-outlined">store</span> Inicio</a>
+            <a class="enlace-menu" href="productos.html"><span class="material-symbols-outlined">shopping_bag</span> Productos</a>
+            <a class="enlace-menu" href="especialidades.html"><span class="material-symbols-outlined">favorite</span> Especialidades</a>
+            <a class="enlace-menu" href="horarios.html"><span class="material-symbols-outlined">schedule</span> Horarios</a>
+            <a class="enlace-menu activo" href="contacto.html"><span class="material-symbols-outlined">mail</span> Contacto</a>
+            <button class="boton-tema" id="boton-tema">🌙 Modo oscuro</button>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+
+        <section>
+            <h2><span class="material-symbols-outlined">mail</span> Haz tu pedido</h2>
+            <p class="intro">Rellena el formulario y te prepararemos tu pedido para la fecha que elijas. Recuerda que los pedidos especiales necesitan 24 horas de antelación.</p>
+
+            <form id="formulario-pedido" action="#" method="get">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="600 123 456">
+                </div>
+
+                <div class="campo">
+                    <label for="producto">Producto</label>
+                    <select id="producto" name="producto">
+                        <option>Bomba de chocolate</option>
+                        <option>Croissant de chocolate</option>
+                        <option>Palmera de Kinder</option>
+                        <option>Pan de masa madre</option>
+                        <option>Baguette Tradicional</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha de recogida</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+
+                <div class="campo">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Alergias, peticiones especiales..."></textarea>
+                </div>
+
+                <button type="submit" class="boton-enviar">Enviar pedido</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer id="pie">
+        <p>&copy; 2026 Panadería El Horno Dorado - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="tema.js"></script>
+</body>
+</html>
