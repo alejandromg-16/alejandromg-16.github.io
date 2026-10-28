@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios - Panadería El Horno Dorado</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header id="cabecera">
+        <h1 class="titulo-principal">El Horno Dorado</h1>
+        <p class="subtitulo">Panadería &amp; Pastelería Artesanal</p>
+        <nav class="menu">
+            <a class="enlace-menu" href="index.html"><span class="material-symbols-outlined">store</span> Inicio</a>
+            <a class="enlace-menu" href="productos.html"><span class="material-symbols-outlined">shopping_bag</span> Productos</a>
+            <a class="enlace-menu" href="especialidades.html"><span class="material-symbols-outlined">favorite</span> Especialidades</a>
+            <a class="enlace-menu activo" href="horarios.html"><span class="material-symbols-outlined">schedule</span> Horarios</a>
+            <a class="enlace-menu" href="contacto.html"><span class="material-symbols-outlined">mail</span> Contacto</a>
+            <button class="boton-tema" id="boton-tema">🌙 Modo oscuro</button>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+
+        <section>
+            <h2><span class="material-symbols-outlined">schedule</span> Lista de Precios y Horarios de Horneado</h2>
+            <p class="intro">Cada pan sale del horno a una hora distinta. Consulta la tabla para llegar justo cuando salga el que más te gusta.</p>
+
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Tipo de Harina</th>
+                            <th>Hora de Salida</th>
+                            <th>Precio Unitario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Baguette Tradicional</td>
+                            <td>Harina de trigo y levadura seca</td>
+                            <td>07:00 AM</td>
+                            <td>1.20 €</td>
+                        </tr>
+                        <tr>
+                            <td>Pan de harina</td>
+                            <td>Harina de trigo y levadura fresca</td>
+                            <td>08:30 AM</td>
+                            <td>2.80 €</td>
+                        </tr>
+                        <tr>
+                            <td>Pan de Piña</td>
+                            <td>Trigo y huevos</td>
+                            <td>09:15 AM</td>
+                            <td>3.50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Pan de chapata</td>
+                            <td>Corteza crujiente y miga llena de agujeros</td>
+                            <td>10:00 AM</td>
+                            <td>3.20 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Notas de Producción</h2>
+            <div class="nota-margen-1">Nota 1: Pedidos especiales con 24h de antelación.</div>
+            <div class="nota-margen-2">Nota 2: Pregunta por nuestras opciones sin gluten.</div>
+
+            <p class="oferta-oculta">Esta oferta especial está oculta con display: none.</p>
+        </section>
+
+    </main>
+
+    <footer id="pie">
+        <p>&copy; 2026 Panadería El Horno Dorado - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="tema.js"></script>
+</body>
+</html>
