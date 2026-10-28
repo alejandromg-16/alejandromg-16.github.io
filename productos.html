@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Panadería El Horno Dorado</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header id="cabecera">
+        <h1 class="titulo-principal">El Horno Dorado</h1>
+        <p class="subtitulo">Panadería &amp; Pastelería Artesanal</p>
+        <nav class="menu">
+            <a class="enlace-menu" href="index.html"><span class="material-symbols-outlined">store</span> Inicio</a>
+            <a class="enlace-menu activo" href="productos.html"><span class="material-symbols-outlined">shopping_bag</span> Productos</a>
+            <a class="enlace-menu" href="especialidades.html"><span class="material-symbols-outlined">favorite</span> Especialidades</a>
+            <a class="enlace-menu" href="horarios.html"><span class="material-symbols-outlined">schedule</span> Horarios</a>
+            <a class="enlace-menu" href="contacto.html"><span class="material-symbols-outlined">mail</span> Contacto</a>
+            <button class="boton-tema" id="boton-tema">🌙 Modo oscuro</button>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="productos">
+            <h2>Nuestros Productos Destacados</h2>
+            <p class="intro">Descubre nuestra variedad diaria preparada desde muy temprano. Todo lo que ves aquí sale del horno cada mañana.</p>
+            <div class="tarjeta-producto destacado">
+                <h3>Bomba de chocolate</h3>
+                <p>Cacao en polvo y chocolate para fundir.</p>
+                <strong>1.50 €</strong>
+            </div>
+
+            <div class="tarjeta-producto">
+                <h3>Croissant de chocolate</h3>
+                <p>Hojaldre artesanal elaborado diariamente.</p>
+                <strong>1.80 €</strong>
+            </div>
+
+            <div class="tarjeta-producto">
+                <h3>Palmera de Kinder</h3>
+                <p>Una lámina de hojaldre, azúcar, chocolate con leche, crema de avellanas y barritas Kinder.</p>
+                <strong>2.00 €</strong>
+            </div>
+        </section>
+
+        <section id="cupones">
+            <h2>Cupones de Descuento</h2>
+            <p>Pasa el ratón por encima de un cupón para verlo completo:</p>
+            <div class="zona-cupones">
+                <div class="cupon nivel-1" id="cupon-1">
+                    <h3>-10% primera compra</h3>
+                    <p>Válido en todo el pan.</p>
+                    <span class="codigo-cupon">HORNO10</span>
+                </div>
+                <div class="cupon nivel-2" id="cupon-2">
+                    <h3>2x1 en croissants</h3>
+                    <p>Todos los martes.</p>
+                    <span class="codigo-cupon">CROISSANT2</span>
+                </div>
+                <div class="cupon nivel-3" id="cupon-3">
+                    <h3>Bomba de regalo</h3>
+                    <p>Con la compra de 5 panes.</p>
+                    <span class="codigo-cupon">DULCE5</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="pie">
+        <p>&copy; 2026 Panadería El Horno Dorado - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="tema.js"></script>
+</body>
+</html>
